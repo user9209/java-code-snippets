@@ -3,7 +3,7 @@
 ## Import private key
 
 ````
-public static PrivateKey convertPublicKey(byte[] privateKeyBytes) throws Exception {
+public static PrivateKey convertPrivateKey(byte[] privateKeyBytes) throws Exception {
     KeySpec keySpec = new PKCS8EncodedKeySpec(privateKeyBytes);
     KeyFactory keyFactory = KeyFactory.getInstance("Ed25519", "BC");
     return keyFactory.generatePrivate(keySpec);
