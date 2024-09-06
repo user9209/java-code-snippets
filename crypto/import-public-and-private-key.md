@@ -19,3 +19,20 @@ public static PublicKey convertPublicKey(byte[] publiceKeyBytes) throws Exceptio
     return keyFactory.generatePublic(keySpec);
 }
 ````
+
+
+## BC AsymmetricKeyParameter to PKCS8
+
+````
+public static byte[] toPKCS8(Ed25519PrivateKeyParameters key) throws Exception {
+    return PrivateKeyInfoFactory.createPrivateKeyInfo(key).getEncoded();
+}
+````
+
+## BC AsymmetricKeyParameter to X509
+
+````
+public static byte[] toX509(Ed25519PublicKeyParameters key) throws Exception {
+    return SubjectPublicKeyInfoFactory.createSubjectPublicKeyInfo(key).getEncoded();
+}
+````
