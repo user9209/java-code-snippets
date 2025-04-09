@@ -1,4 +1,4 @@
-# Depicated API called
+# Deprecated API called
 
 ## Warning
 
